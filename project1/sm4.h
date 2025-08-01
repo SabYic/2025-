@@ -25,14 +25,16 @@ typedef enum {
 #define SM4_KEY_SIZE   16
 
 typedef struct {
-    void *internal; 
+    uint32_t rk[32];  // 32 轮轮密钥
+} sm4_context;
+
+typedef struct {
+    sm4_context *ctx;
     uint8_t iv[SM4_BLOCK_SIZE]; // CBC 模式用
     sm4_mode_t mode;
 } sm4_handle_t;
 
-typedef struct {
-    uint32_t rk[32];  // 32 轮轮密钥
-} sm4_context;
+
 
 sm4_status_t sm4_init(sm4_handle_t *h, const uint8_t key[SM4_KEY_SIZE],
                       sm4_mode_t mode, const uint8_t iv[SM4_BLOCK_SIZE]);
@@ -53,10 +55,10 @@ sm4_status_t sm4_decrypt(const sm4_handle_t *h,
                          uint8_t **out, size_t *out_len);
 
 
-sm4_status_t sm4_ecb_encrypt_pkcs7(const uint8_t key[SM4_KEY_SIZE],
+sm4_status_t sm4_ecb_encrypt_pkcs7(const sm4_handle_t *h,
                                    const uint8_t *in, size_t in_len,
                                    uint8_t **out, size_t *out_len);
-sm4_status_t sm4_ecb_decrypt_pkcs7(const uint8_t key[SM4_KEY_SIZE],
+sm4_status_t sm4_ecb_decrypt_pkcs7(const sm4_handle_t *h,
                                    const uint8_t *in, size_t in_len,
                                    uint8_t **out, size_t *out_len);
 
