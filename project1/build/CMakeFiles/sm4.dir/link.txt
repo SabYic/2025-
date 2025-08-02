@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsm4.a CMakeFiles/sm4.dir/sm4.c.o
+/usr/bin/ranlib libsm4.a

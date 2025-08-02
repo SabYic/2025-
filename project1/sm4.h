@@ -44,10 +44,11 @@ sm4_status_t sm4_set_key(sm4_handle_t *h, const uint8_t key[SM4_KEY_SIZE]);
 
 void sm4_free(sm4_handle_t *h);
 
+const char *sm4_status_to_string(sm4_status_t s) ;
 
 sm4_status_t sm4_encrypt(const sm4_handle_t *h,
                          const uint8_t *in, size_t in_len,
-                         uint8_t **out, size_t *out_len);
+                         uint8_t **out, size_t **out_len);
 
 
 sm4_status_t sm4_decrypt(const sm4_handle_t *h,
