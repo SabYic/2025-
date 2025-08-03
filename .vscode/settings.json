@@ -77,5 +77,6 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "time.h": "c"
-    }
+    },
+    "cmake.sourceDirectory": "/home/wjsun/learnspace/2025-/project1"
 }
