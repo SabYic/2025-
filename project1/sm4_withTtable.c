@@ -210,7 +210,7 @@ static void sm4_encrypt_block(const uint32_t rk[32], const uint8_t in[16], uint8
     PUT_ULONG_BE(X[32], out, 12);
 }
 
-sm4_status_t sm4_encrypt(const sm4_handle_t *h,
+sm4_status_t sm4_encrypt_with_Ttable(const sm4_handle_t *h,
                          const uint8_t *in, size_t in_len,
                          uint8_t **out, size_t **out_len) {
     if (!h || !in )
@@ -267,7 +267,7 @@ static void sm4_decrypt_block(const uint32_t rk[32], const uint8_t in[16], uint8
     PUT_ULONG_BE(X[32], out, 12);
 }
 
-sm4_status_t sm4_decrypt(const sm4_handle_t *h,
+sm4_status_t sm4_decrypt_with_Ttable(const sm4_handle_t *h,
                          const uint8_t *in, size_t in_len,
                          uint8_t **out, size_t *out_len) {
     if (!h || !in )
@@ -312,31 +312,6 @@ sm4_status_t sm4_decrypt(const sm4_handle_t *h,
     out_len = malloc(sizeof(size_t));
     *out = trimmed;
     *out_len = plain_len;
-    return SM4_OK;
-}
-
-sm4_status_t sm4_ecb_encrypt_pkcs7(const sm4_handle_t *h,
-                                   const uint8_t *in, size_t in_len,
-                                   uint8_t **out, size_t *out_len) {
-    if (!h || !in || !out || !out_len)
-        return SM4_ERR_NULL_PARAM;
-
-    size_t pad = pkcs7_pad_len(in_len);
-    size_t total = in_len + pad;
-
-    uint8_t *buf = (uint8_t *)malloc(total);
-    if (!buf)
-        return SM4_ERR_ALLOC_FAIL;
-
-    memcpy(buf, in, in_len);
-    memset(buf + in_len, (uint8_t)pad, pad);
-
-    for (size_t off = 0; off < total; off += SM4_BLOCK_SIZE) {
-        sm4_encrypt_block(h->ctx->rk, buf + off, buf + off);
-    }
-
-    *out = buf;
-    *out_len = total;
     return SM4_OK;
 }
 
