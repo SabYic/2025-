@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsm4ttable.a CMakeFiles/sm4ttable.dir/sm4_withTtable.c.o
+/usr/bin/ranlib libsm4ttable.a

@@ -93,6 +93,7 @@ sm4_demo_EXTERNAL_OBJECTS =
 sm4_demo: CMakeFiles/sm4_demo.dir/main.c.o
 sm4_demo: CMakeFiles/sm4_demo.dir/build.make
 sm4_demo: libsm4.a
+sm4_demo: libsm4ttable.a
 sm4_demo: CMakeFiles/sm4_demo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wjsun/learnspace/2025-/project1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable sm4_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sm4_demo.dir/link.txt --verbose=$(VERBOSE)

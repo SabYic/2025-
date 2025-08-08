@@ -1,4 +1,5 @@
 /home/wjsun/learnspace/2025-/project1/build/CMakeFiles/sm4.dir
+/home/wjsun/learnspace/2025-/project1/build/CMakeFiles/sm4ttable.dir
 /home/wjsun/learnspace/2025-/project1/build/CMakeFiles/sm4_demo.dir
 /home/wjsun/learnspace/2025-/project1/build/CMakeFiles/edit_cache.dir
 /home/wjsun/learnspace/2025-/project1/build/CMakeFiles/rebuild_cache.dir

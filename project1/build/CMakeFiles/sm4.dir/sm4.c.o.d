@@ -1,6 +1,5 @@
 CMakeFiles/sm4.dir/sm4.c.o: /home/wjsun/learnspace/2025-/project1/sm4.c \
  /usr/include/stdc-predef.h /home/wjsun/learnspace/2025-/project1/sm4.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -10,7 +9,9 @@ CMakeFiles/sm4.dir/sm4.c.o: /home/wjsun/learnspace/2025-/project1/sm4.c \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/stdio.h \
+ /usr/include/bits/stdint-least.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
+ /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
  /usr/include/bits/types/__fpos64_t.h /usr/include/bits/types/__FILE.h \

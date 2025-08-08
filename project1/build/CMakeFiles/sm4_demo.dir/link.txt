@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/sm4_demo.dir/main.c.o -o sm4_demo  libsm4.a
+/usr/bin/cc CMakeFiles/sm4_demo.dir/main.c.o -o sm4_demo  libsm4.a libsm4ttable.a

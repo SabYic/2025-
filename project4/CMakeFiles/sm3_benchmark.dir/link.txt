@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/sm3_benchmark.dir/sm3_benchmark.c.o -o sm3_benchmark  libsm3_base.a libsm3_parallel.a

@@ -130,6 +130,19 @@ sm4/fast:
 .PHONY : sm4/fast
 
 #=============================================================================
+# Target rules for targets named sm4ttable
+
+# Build rule for target.
+sm4ttable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sm4ttable
+.PHONY : sm4ttable
+
+# fast build rule for target.
+sm4ttable/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/build
+.PHONY : sm4ttable/fast
+
+#=============================================================================
 # Target rules for targets named sm4_demo
 
 # Build rule for target.
@@ -190,6 +203,30 @@ sm4.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4.dir/build.make CMakeFiles/sm4.dir/sm4.c.s
 .PHONY : sm4.c.s
 
+sm4_withTtable.o: sm4_withTtable.c.o
+.PHONY : sm4_withTtable.o
+
+# target to build an object file
+sm4_withTtable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/sm4_withTtable.c.o
+.PHONY : sm4_withTtable.c.o
+
+sm4_withTtable.i: sm4_withTtable.c.i
+.PHONY : sm4_withTtable.i
+
+# target to preprocess a source file
+sm4_withTtable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/sm4_withTtable.c.i
+.PHONY : sm4_withTtable.c.i
+
+sm4_withTtable.s: sm4_withTtable.c.s
+.PHONY : sm4_withTtable.s
+
+# target to generate assembly for a file
+sm4_withTtable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/sm4_withTtable.c.s
+.PHONY : sm4_withTtable.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,12 +237,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... sm4"
 	@echo "... sm4_demo"
+	@echo "... sm4ttable"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... sm4.o"
 	@echo "... sm4.i"
 	@echo "... sm4.s"
+	@echo "... sm4_withTtable.o"
+	@echo "... sm4_withTtable.i"
+	@echo "... sm4_withTtable.s"
 .PHONY : help
 
 

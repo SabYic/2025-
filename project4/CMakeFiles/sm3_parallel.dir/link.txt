@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsm3_parallel.a CMakeFiles/sm3_parallel.dir/sm3_parallel.c.o
+/usr/bin/ranlib libsm3_parallel.a

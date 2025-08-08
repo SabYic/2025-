@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/wjsun/learnspace/2025-/project1/build
 
 # The main recursive "all" target.
 all: CMakeFiles/sm4.dir/all
+all: CMakeFiles/sm4ttable.dir/all
 all: CMakeFiles/sm4_demo.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/sm4.dir/clean
+clean: CMakeFiles/sm4ttable.dir/clean
 clean: CMakeFiles/sm4_demo.dir/clean
 .PHONY : clean
 
@@ -103,10 +105,37 @@ CMakeFiles/sm4.dir/clean:
 .PHONY : CMakeFiles/sm4.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/sm4ttable.dir
+
+# All Build rule for target.
+CMakeFiles/sm4ttable.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wjsun/learnspace/2025-/project1/build/CMakeFiles --progress-num=5,6 "Built target sm4ttable"
+.PHONY : CMakeFiles/sm4ttable.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sm4ttable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjsun/learnspace/2025-/project1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sm4ttable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjsun/learnspace/2025-/project1/build/CMakeFiles 0
+.PHONY : CMakeFiles/sm4ttable.dir/rule
+
+# Convenience name for target.
+sm4ttable: CMakeFiles/sm4ttable.dir/rule
+.PHONY : sm4ttable
+
+# clean rule for target.
+CMakeFiles/sm4ttable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4ttable.dir/build.make CMakeFiles/sm4ttable.dir/clean
+.PHONY : CMakeFiles/sm4ttable.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/sm4_demo.dir
 
 # All Build rule for target.
 CMakeFiles/sm4_demo.dir/all: CMakeFiles/sm4.dir/all
+CMakeFiles/sm4_demo.dir/all: CMakeFiles/sm4ttable.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4_demo.dir/build.make CMakeFiles/sm4_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sm4_demo.dir/build.make CMakeFiles/sm4_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wjsun/learnspace/2025-/project1/build/CMakeFiles --progress-num=3,4 "Built target sm4_demo"
@@ -114,7 +143,7 @@ CMakeFiles/sm4_demo.dir/all: CMakeFiles/sm4.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sm4_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjsun/learnspace/2025-/project1/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjsun/learnspace/2025-/project1/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sm4_demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wjsun/learnspace/2025-/project1/build/CMakeFiles 0
 .PHONY : CMakeFiles/sm4_demo.dir/rule
