@@ -1,23 +1,4 @@
-// sm4_gcm.c — single-file implementation
-// Portable baseline SM4 + T-table optimization + GCM (GHASH w/ PCLMULQDQ when available)
-// Optional AVX-512 (VPROLD) hooks for parallel SM4 (S-box via tables)
-//
-// Build examples (Linux/Clang or GCC):
-//   Portable + T-tables:
-//     cc -O3 -Wall -Wextra -march=native -DSM4_USE_TTABLE -o sm4_gcm sm4_gcm.c
-//   Enable PCLMULQDQ-accelerated GHASH (detected at runtime too):
-//     cc -O3 -Wall -Wextra -march=native -mpclmul -o sm4_gcm sm4_gcm.c
-//     // NOTE: if you omit -mpclmul, the file still builds, but GHASH will fall back to portable path.
-//   Force portable (no PCLMUL):
-//     cc -O3 -Wall -Wextra -DSM4_NO_PCLMUL -o sm4_gcm sm4_gcm.c
-//   With AVX-512 rotate-left intrinsics (for L transform speedup in parallel path):
-//     cc -O3 -Wall -Wextra -mavx512f -mavx512vl -DSM4_USE_AVX512 -o sm4_gcm sm4_gcm.c
-//     cc -O3 -Wall -Wextra -mavx512f -mavx512vl -DSM4_USE_AVX512 -o sm4_gcm sm4_gcm.c
-//
-// Minimal self-test:
-//   ./sm4_gcm --selftest./
-//   (checks known-answer test for SM4 block, and a small GCM roundtrip)
-//
+
 #include <immintrin.h>
 #include <stdint.h>
 #include <string.h>
